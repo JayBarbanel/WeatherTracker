@@ -22,17 +22,16 @@ h2 {
 }
 
 h3 {
-    margin-left: 29%;
+    margin-left: 31%;
 }
 
-.container-lg {
+.container {
     background-color: rgb(228, 225, 225);
     float: right;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     height: 350px;
-    margin-right: 20px;
     width: 70%;
     margin-bottom: 10px;
 }
@@ -40,16 +39,17 @@ h3 {
 .card {
     background-color: rgb(228, 225, 225);
     margin-top: 2px;
-    margin-left: 29%;
+    margin-left: 31%;
 }
 
 .searchCard {
-    background: rgb(228, 225, 225);
+    position: fixed;
+    background-color: rgb(228, 225, 225);
     border-style: solid;
     border-color: black;
     border-width: 2px;
     width: 20%;
-    margin-top: 10px;
+    height: 100%;
 }
 
 

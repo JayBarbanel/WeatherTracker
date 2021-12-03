@@ -1,3 +1,7 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
 .header {
     border-style: solid;
     border-color: black;
@@ -5,7 +9,6 @@
     height: 65px;
     color: white;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
     background-image: linear-gradient(to right, rgb(97, 99, 231), rgb(34, 3, 189))
 }
 
@@ -13,18 +16,76 @@ h1 {
     margin: 3px;
 }
 
+h2 {
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+h3 {
+    margin-left: 29%;
+}
+
 .container-lg {
+    background-color: rgb(228, 225, 225);
     float: right;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     height: 350px;
-    margin-top: 30px;
     margin-right: 20px;
+    width: 70%;
+    margin-bottom: 10px;
 }
 
-.list-group {
-    margin-top: 70px;
-    width: 70;
-    text-align: center;
+.card {
+    background-color: rgb(228, 225, 225);
+    margin-top: 2px;
+    margin-left: 29%;
+}
+
+.searchCard {
+    background: rgb(228, 225, 225);
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 20%;
+    margin-top: 10px;
+}
+
+
+/* Style the search field */
+
+form.example input[type=text] {
+    font-size: 17px;
+    border: 1px solid grey;
+    width: 50%;
+    margin-left: 3%
+}
+
+
+/* Style the submit button */
+
+form.example button {
+    width: 5%;
+    padding: 10px;
+    background: rgb(34, 3, 189);
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+
+/* Clear floats */
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
 }

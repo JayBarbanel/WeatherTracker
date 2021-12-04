@@ -1,91 +1,94 @@
-* {
-    font-family: 'Nunito', sans-serif;
-}
-
-.header {
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    height: 65px;
-    color: white;
-    text-align: center;
-    background-image: linear-gradient(to right, rgb(97, 99, 231), rgb(34, 3, 189))
-}
-
-h1 {
-    margin: 3px;
-}
-
-h2 {
-    margin-top: 2%;
-    margin-left: 3%;
-}
-
-h3 {
-    margin-left: 31%;
-}
-
-.container {
-    background-color: rgb(228, 225, 225);
-    float: right;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    height: 350px;
-    width: 70%;
-    margin-bottom: 10px;
-}
-
-.card {
-    background-color: rgb(228, 225, 225);
-    margin-top: 2px;
-    margin-left: 31%;
-}
-
-.searchCard {
-    position: fixed;
-    background-color: rgb(228, 225, 225);
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    width: 20%;
-    height: 100%;
-}
-
-
-/* Style the search field */
-
-form.example input[type=text] {
-    font-size: 17px;
-    border: 1px solid grey;
-    width: 50%;
-    margin-left: 3%
-}
-
-
-/* Style the submit button */
-
-form.example button {
-    width: 5%;
-    padding: 10px;
-    background: rgb(34, 3, 189);
-    color: white;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
-    /* Prevent double borders */
-    cursor: pointer;
-}
-
-form.example button:hover {
-    background: #0b7dda;
-}
-
-
-/* Clear floats */
-
-form.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+    * {
+        font-family: 'Nunito', sans-serif;
+    }
+    
+    .header {
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        height: 65px;
+        color: white;
+        text-align: center;
+        background-image: linear-gradient(to right, rgb(97, 99, 231), rgb(34, 3, 189))
+    }
+    
+    h1 {
+        margin: 3px;
+    }
+    
+    h2 {
+        margin-top: 2%;
+        margin-left: 3%;
+    }
+    
+    h3 {
+        margin-left: 31%;
+    }
+    
+    .container {
+        background-color: rgb(228, 225, 225);
+        float: right;
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        height: 350px;
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    
+    .card {
+        background-color: rgb(228, 225, 225);
+        margin-top: 2px;
+        margin-left: 31%;
+        width: 15%;
+        height: 250px;
+    }
+    
+    .searchCard {
+        position: fixed;
+        background-color: rgb(228, 225, 225);
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        width: 20%;
+        height: 100%;
+    }
+    /* Style the search field */
+    
+    .searchInput[type=text] {
+        font-size: 17px;
+        border: 1px solid grey;
+        width: 50%;
+        margin-left: 3%
+    }
+    /* Style the submit button */
+    
+    .searchInput {
+        padding: 10px;
+        background: rgb(34, 3, 189);
+        color: white;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        /* Prevent double borders */
+        cursor: pointer;
+        align-items: center;
+    }
+    
+    .searchInput {
+        background: #0b7dda;
+    }
+    /* Clear floats */
+    
+    .searchInput {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .submitBtn {
+        height: 30px;
+        width: 60px;
+        margin-left: 35%;
+        font-size: 15px;
+    }

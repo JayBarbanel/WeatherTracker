@@ -3,7 +3,6 @@
     }
     
     body {
-        /* background: url(./video/Clouds\ -\ 41453.mp4); */
         background-size: cover;
     }
     
@@ -15,11 +14,10 @@
         color: white;
         text-align: center;
         background-size: cover;
-        height: 100px;
+        height: 55px;
     }
     
     h1 {
-        margin: 3px;
         color: chocolate;
     }
     
@@ -30,12 +28,13 @@
     }
     
     h3 {
-        margin-left: 31%;
+        margin-left: 32%;
         color: chocolate;
     }
     
     p {
-        background: rgb(228, 225, 225);
+        color: chocolate;
+        background-color: white;
     }
     
     .container {
@@ -44,20 +43,16 @@
         border-color: rgb(255, 255, 255);
         border-width: 2px;
         height: 350px;
-        width: 70%;
+        width: 75%;
         margin-bottom: 10px;
     }
     
     .cardContainer {
-        background-color: rgb(228, 225, 225);
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 70%;
+        width: 68.5%;
         float: right;
-        border-style: solid;
-        border-color: rgb(255, 255, 255);
-        border-width: 2px;
     }
     
     .searchCard {
@@ -97,7 +92,7 @@
     .submitBtn {
         height: 30px;
         width: 60px;
-        margin-left: 35%;
+        margin-left: 53%;
         font-size: 15px;
     }
     

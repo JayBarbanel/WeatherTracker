@@ -3,6 +3,8 @@ var searchInput = $(".searchInput");
 var key = 'fe371c9d6acb63e6b6c8e75cc5e50675'
 var inputBox = $("#inputBox");
 
+
+
 function getWeather(event) {
     event.preventDefault()
     console.log("Hello")
@@ -66,3 +68,14 @@ function displayWeather(url, cityname) {
 
 
 searchInput.on('submit', getWeather)
+
+var input = document.getElementById('searchInput').value;
+localStorage.setItem('server', input);
+
+$(document).ready(function() {
+    // Get value on button click and show alert
+    $("#submitBtn").click(function() {
+        var str = $("#myInput").val();
+        alert(str);
+    });
+});

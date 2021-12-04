@@ -50,7 +50,6 @@ function displayWeather(url, cityname) {
                 $(cardDiv).append(dayTemp)
                 var dayTemp = $("<p>").text("UV Index: " + day.uvi)
                 $(cardDiv).append(dayTemp)
-
                 $(".cardContainer").append(cardDiv)
 
 

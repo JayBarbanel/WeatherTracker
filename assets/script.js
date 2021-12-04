@@ -63,19 +63,17 @@ function displayWeather(url, cityname) {
 
 }
 
-
+const updateLocalStorage = searchInput => {
+    // gets what ever is in Local storage and parses it
+    let cityListLocalStorage = JSON.parse(localstorage.getItem("cityList"))
+        // Check to see if there is something there, if there is nothing there, then return out of the function and do nothing
+    if (cityListLocalStorage === null) return
+        // then adds the value from the search bar to the beggining of the newly parsed array
+    cityListLocalStorage.unshift(searchInput);
+    // Then resaves the the array to local storage
+    localstorage.setItem("cityList", JSON.stringify(cityListLocalStorage))
+}
 
 
 
 searchInput.on('submit', getWeather)
-
-var input = document.getElementById('searchInput').value;
-localStorage.setItem('server', input);
-
-$(document).ready(function() {
-    // Get value on button click and show alert
-    $("#submitBtn").click(function() {
-        var str = $("#myInput").val();
-        alert(str);
-    });
-});

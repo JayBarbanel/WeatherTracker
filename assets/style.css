@@ -2,53 +2,68 @@
         font-family: 'Nunito', sans-serif;
     }
     
+    body {
+        background: url(./Images/Field.jpg);
+        background-size: cover;
+    }
+    
     .header {
+        background-color: rgb(5, 27, 99);
         border-style: solid;
-        border-color: black;
         border-width: 2px;
         height: 65px;
         color: white;
         text-align: center;
-        background-image: linear-gradient(to right, rgb(97, 99, 231), rgb(34, 3, 189))
+        background-size: cover;
+        height: 100px;
     }
     
     h1 {
         margin: 3px;
+        color: chocolate;
     }
     
     h2 {
         margin-top: 2%;
         margin-left: 3%;
+        color: chocolate;
     }
     
     h3 {
         margin-left: 31%;
+        color: chocolate;
+    }
+    
+    p {
+        background: rgb(228, 225, 225);
     }
     
     .container {
-        background-color: rgb(228, 225, 225);
         float: right;
         border-style: solid;
-        border-color: black;
+        border-color: rgb(255, 255, 255);
         border-width: 2px;
         height: 350px;
         width: 70%;
         margin-bottom: 10px;
     }
     
-    .card {
+    .cardContainer {
         background-color: rgb(228, 225, 225);
-        margin-top: 2px;
-        margin-left: 31%;
-        width: 15%;
-        height: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+        float: right;
+        border-style: solid;
+        border-color: rgb(255, 255, 255);
+        border-width: 2px;
     }
     
     .searchCard {
         position: fixed;
-        background-color: rgb(228, 225, 225);
         border-style: solid;
-        border-color: black;
+        border-color: rgb(255, 255, 255);
         border-width: 2px;
         width: 20%;
         height: 100%;
@@ -65,18 +80,11 @@
     
     .searchInput {
         padding: 10px;
-        background: rgb(34, 3, 189);
         color: white;
         font-size: 17px;
-        border: 1px solid grey;
-        border-left: none;
         /* Prevent double borders */
         cursor: pointer;
         align-items: center;
-    }
-    
-    .searchInput {
-        background: #0b7dda;
     }
     /* Clear floats */
     

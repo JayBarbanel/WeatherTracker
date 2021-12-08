@@ -10,5 +10,8 @@ The HTML and CSS were used to button up the designs.
 
 # links 
 
+https://github.com/JayBarbanel/WeatherTracker
 
+https://jaybarbanel.github.io/WeatherTracker/
 
+![Screen Shot 2021-12-07 at 4 10 58 PM](https://user-images.githubusercontent.com/89555843/145125474-1de9a323-7ff9-4354-8067-eebb2a528e7d.png)

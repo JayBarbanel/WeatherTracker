@@ -3,12 +3,19 @@ var searchInput = $(".searchInput");
 var key = 'fe371c9d6acb63e6b6c8e75cc5e50675'
 var inputBox = $("#inputBox");
 
-
+var userSearch = "";
 
 function getWeather(event) {
     event.preventDefault()
     console.log("Hello")
-    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + inputBox.val() + "&appid=" + key
+    var city = inputBox.val()
+    callAPI(city)
+
+
+}
+
+function callAPI(city) {
+    var url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key
 
     fetch(url)
         .then(function(res) {
@@ -18,9 +25,8 @@ function getWeather(event) {
             console.log(data)
             displayWeather(link, data.name)
         })
-
-
 }
+
 
 function displayWeather(url, cityname) {
     console.log(cityname)
@@ -28,8 +34,9 @@ function displayWeather(url, cityname) {
         .then(function(res) {
             return res.json()
         }).then(function(data) {
-
+            updateLocalStorage(cityname)
             console.log(data)
+            var userSearch = "cityname"
             $(".container").html(`
 <h2>${cityname}</h2>
             `)
@@ -41,6 +48,7 @@ function displayWeather(url, cityname) {
             $(".container").append(tempEl)
             var tempEl = $("<p>").text("UV Index: " + data.current.uvi)
             $(".container").append(tempEl)
+            $(".cardContainer").html("")
             for (let i = 0; i < 5; i++) {
                 const day = data.daily[i];
                 var cardDiv = $("<div>").attr("class", "card")
@@ -65,15 +73,32 @@ function displayWeather(url, cityname) {
 
 const updateLocalStorage = searchInput => {
     // gets what ever is in Local storage and parses it
-    let cityListLocalStorage = JSON.parse(localstorage.getItem("cityList"))
-        // Check to see if there is something there, if there is nothing there, then return out of the function and do nothing
-    if (cityListLocalStorage === null) return
-        // then adds the value from the search bar to the beggining of the newly parsed array
-    cityListLocalStorage.unshift(searchInput);
-    // Then resaves the the array to local storage
-    localstorage.setItem("cityList", JSON.stringify(cityListLocalStorage))
+    let cityListLocalStorage = JSON.parse(localStorage.getItem("cityList")) || []
+
+    if (cityListLocalStorage.includes(searchInput)) {
+        return
+    } else {
+        cityListLocalStorage.unshift(searchInput);
+        // Then resaves the the array to local storage
+        localStorage.setItem("cityList", JSON.stringify(cityListLocalStorage))
+        var searchResults = $("#searchResults")
+        var button = $("<button>").text(searchInput)
+        searchResults.append(button)
+    }
 }
 
+function getLocalStorage() {
+    let cityListLocalStorage = JSON.parse(localStorage.getItem("cityList")) || []
+    for (let i = 0; i < cityListLocalStorage.length; i++) {
+        const element = cityListLocalStorage[i];
+        var searchResults = $("#searchResults")
+        var button = $("<button>").text(element).on("click", function(event) {
+            callAPI(event.target.textContent)
+        })
+        searchResults.append(button)
+    }
+}
+getLocalStorage()
 
 
 searchInput.on('submit', getWeather)
